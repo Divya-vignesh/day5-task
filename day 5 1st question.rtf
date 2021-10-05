@@ -1,0 +1,366 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil\fcharset0 Times New Roman;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\par
+\ul\f1\fs32 1)Print odd numbers in an array\par
+anonymous function\f0\fs22\par
+\ulnone\f1\fs28 var odd=function(arr)\par
+\{\par
+    var arr1="";\par
+    for(var i=0;i<arr.length;i++)                                                \par
+    \{\par
+        if((arr[i] % 2) !== 0)\par
+        \{\par
+           arr1=arr1+" "+arr[i]+ " ";\par
+        \}\par
+      \}\par
+    console.log(arr1);\par
+\}\par
+odd([1,2,3,4,5,6,7,8,9]);\par
+\ul\f2\fs40 Output:\par
+\ulnone\f0\fs22  \f1\fs28 1  3  5  7  9 \par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8084kb\par
+\par
+\ul IIFE FUNCTION\par
+\ulnone (function(arr)\{\par
+   var arr1="";\par
+    for(var i=0;i<arr.length;i++)\par
+    \{\par
+        if((arr[i] % 2) !== 0)\par
+        \{\par
+           arr1=arr1+" "+arr[i]+ " ";\par
+        \}\par
+    \}\par
+    console.log(arr1);\par
+ \})([1,2,3,4,5,6,7,8,9]);\par
+\par
+\ul\fs32 Output:\par
+\ulnone\fs28 Output:\par
+ 1  3  5  7  9 \par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8144kb\par
+\ul\fs32 2)Convert all the strings to title caps in a string array\par
+anonymous function\f0\fs22\par
+\ulnone\f1\fs28 var titlecaps=function(arr)\par
+\{\par
+    var arr1="";\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       arr1= arr1+" "+arr[i].charAt(0).toUpperCase()+arr[i].slice(1,arr[i].length);\par
+   \}\par
+   console.log(arr1);\par
+\}\par
+titlecaps(["vicky","divya","kirthik"])\par
+\ul\fs32 Output:\par
+\ulnone\fs28  Vicky Divya Kirthik\par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8120kb\par
+\ul IIFE FUNCTION\ulnone\par
+(function(arr)\par
+\{\par
+    var arr1="";\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       arr1= arr1+" "+arr[i].charAt(0).toUpperCase()+arr[i].slice(1,arr[i].length);\par
+   \}\par
+   console.log(arr1);\par
+\})(["vicky","divya","kirthik"]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28  Vicky Divya Kirthik\par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8088kb\par
+\ul\fs32 3)Sum of all numbers in an array\par
+Anonymous function\f0\fs22\par
+\ulnone\f1\fs28 var sum=function(arr)\par
+\{\par
+    var sum=0;\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       sum=sum+arr[i];\par
+   \}\par
+   console.log(sum);\par
+\}\par
+sum([1,2,3,4,5]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 15\par
+Execution Time:\par
+0.069s\par
+Memory Used:\par
+8052kb\par
+\ul\fs32 IIFE Function\par
+\ulnone\fs28 (function(arr)\par
+\{\par
+    var sum=0;\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       sum=sum+arr[i];\par
+   \}\par
+   console.log(sum);\par
+\})([1,2,3,4,5]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 15\par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8036kb\par
+\ul\fs32 4)Return all the prime numbers in an array\par
+Anonymous function\par
+\ulnone\fs28 var prime=function(arr)\par
+\{\par
+    var arr1="";\par
+    var sum=0;\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       for(var j=2;j<=arr[i];j++)\par
+       \{\par
+           if((arr[i] % j) ===0)\par
+           \{\par
+              sum=sum+1; \par
+           \}\par
+       \}\par
+       if(sum===1)\par
+       \{\par
+           arr1=arr1+" "+arr[i]+" ";\par
+       \}\par
+       sum=0;\par
+   \}\par
+   console.log(arr1);\par
+\}\par
+prime([5,4,2,3]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28  5  2  3 \par
+Execution Time:\par
+0.064s\par
+Memory Used:\par
+8120kb\ul\fs32\par
+IIFE Function\par
+\ulnone\fs28 (function(arr)\par
+\{\par
+    var arr1="";\par
+    var sum=0;\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       for(var j=2;j<=arr[i];j++)\par
+       \{\par
+           if((arr[i] % j) ===0)\par
+           \{\par
+              sum=sum+1; \par
+           \}\par
+       \}\par
+       if(sum===1)\par
+       \{\par
+           arr1=arr1+" "+arr[i]+" ";\par
+       \}\par
+       sum=0;\par
+   \}\par
+   console.log(arr1);\par
+\})([5,4,2,3]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28  5  2  3 \par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8028kb\par
+\ul\fs32 5)Return all the palindromes in an array\par
+Anonymous function\par
+\ulnone\fs28 var palindrome=function(arr)\par
+\{\par
+    var arr1="";\par
+    var arr2="";\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       for(var j=arr[i].length-1;j>=0;j--)\par
+       \{\par
+         arr1= arr1+arr[i].charAt(j);\par
+       \}\par
+       if(arr[i]==arr1)\par
+      \{\par
+        arr2=arr2+" "+arr1;\par
+       \}\par
+       arr1="";\par
+   \}\par
+   console.log(arr2);\par
+\}\par
+palindrome(["malayalam","Kirthik","madam","vignesh"])\par
+\ul\fs32 Output:\par
+\ulnone\fs28  malayalam madam\par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8128kb\par
+\ul\fs32 IIFE Function\par
+\ulnone\fs28 (function(arr)\par
+\{\par
+    var arr1="";\par
+    var arr2="";\par
+   for(var i=0;i<arr.length;i++)\par
+   \{\par
+       for(var j=arr[i].length-1;j>=0;j--)\par
+       \{\par
+         arr1= arr1+arr[i].charAt(j);\par
+       \}\par
+       if(arr[i]==arr1)\par
+      \{\par
+        arr2=arr2+" "+arr1;\par
+       \}\par
+       arr1="";\par
+   \}\par
+   console.log(arr2);\par
+\})(["malayalam","Kirthik","madam","vignesh"]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28  malayalam madam\par
+Execution Time:\par
+0.066s\par
+Memory Used:\par
+8072kb\par
+\ul\fs32 6)Return median of two sorted arrays of same size\par
+Anonymous function\par
+\ulnone\fs28 var median=function(arr1,arr2)\par
+\{\par
+var temp;\par
+var arr=arr1.concat(arr2);\par
+console.log("Merged array :"+arr);\par
+\par
+for(var i=0;i<arr.length;i++)\par
+\{\par
+   for(var j=i+1;j<arr.length;j++)\par
+   \{\par
+    if(arr[i]>arr[j])\par
+     \{\par
+        temp=arr[i];\par
+        arr[i]=arr[j];\par
+        arr[j]=temp;\par
+     \}\par
+   \}\par
+\}\par
+console.log("Sorted array :"+arr);\par
+var n=arr.length;\par
+var n1=n/2-1;\par
+var n2=(arr[n1]+arr[n1+1])/2;\par
+console.log("Median :"+n2);\par
+\}\par
+median([1,3,5,7],[2,4,6,8]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 Merged array :1,3,5,7,2,4,6,8\par
+Sorted array :1,2,3,4,5,6,7,8\par
+Median :4.5\par
+Execution Time:\par
+0.065s\par
+Memory Used:\par
+8056kb\par
+\ul\fs32 IIFE Function\ulnone\fs28\par
+(function(arr1,arr2)\par
+\{\par
+var temp;\par
+var arr=arr1.concat(arr2);\par
+console.log("Merged array :"+arr);\par
+\par
+for(var i=0;i<arr.length;i++)\par
+\{\par
+   for(var j=i+1;j<arr.length;j++)\par
+   \{\par
+    if(arr[i]>arr[j])\par
+     \{\par
+        temp=arr[i];\par
+        arr[i]=arr[j];\par
+        arr[j]=temp;\par
+     \}\par
+   \}\par
+\}\par
+console.log("Sorted array :"+arr);\par
+var n=arr.length;\par
+var n1=n/2-1;\par
+var n2=(arr[n1]+arr[n1+1])/2;\par
+console.log("Median :"+n2);\par
+\})([1,3,5,7],[2,4,6,8]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 Merged array :1,3,5,7,2,4,6,8\par
+Sorted array :1,2,3,4,5,6,7,8\par
+Median :4.5\par
+Execution Time:\par
+0.066s\par
+Memory Used:\par
+8112kb\par
+\ul\fs32 7)Remove duplicates from an array\par
+Anonymous function\par
+\ulnone\fs28 var dublicate=function(arr)\par
+\{\par
+\par
+for(var i=0;i<arr.length;i++)\par
+\{\par
+    for(j=i+1;j<arr.length;j++)\par
+    \{\par
+        if(arr[i]==arr[j])\par
+        \{\par
+             arr.splice(j,1);\par
+        \}\par
+    \}\par
+\}\par
+console.log(arr);\par
+\}\par
+dublicate([1,2,4,5,1,6,2]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 [ 1, 2, 4, 5, 6 ]\par
+Execution Time:\par
+0.068s\par
+Memory Used:\par
+8112kb\par
+\ul\fs32 IIFE Function\ulnone\fs28\par
+(function(arr)\par
+\{\par
+\par
+for(var i=0;i<arr.length;i++)\par
+\{\par
+    for(j=i+1;j<arr.length;j++)\par
+    \{\par
+        if(arr[i]==arr[j])\par
+        \{\par
+             arr.splice(j,1);\par
+        \}\par
+    \}\par
+\}\par
+console.log(arr);\par
+\})([1,2,4,5,1,6,2]);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 [ 1, 2, 4, 5, 6 ]\par
+Execution Time:\par
+0.066s\par
+Memory Used:\par
+8112kb\par
+\ul\fs32 8)Rotate an array by k times\par
+Anonymous function\par
+\ulnone\fs28 var rotate=function(arr,k)\par
+\{\par
+ var arr1= arr.slice(k).concat(arr.slice(0, k));\par
+ console.log(arr1);\par
+\}\par
+rotate([1,2,3,4,5],2);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 [ 3, 4, 5, 1, 2 ]\par
+Execution Time:\par
+0.066s\par
+Memory Used:\par
+8108kb\ul\fs32\par
+IIFE Function\ulnone\fs28\par
+(function(arr,k)\par
+\{\par
+ var arr1= arr.slice(k).concat(arr.slice(0, k));\par
+ console.log(arr1);\par
+\})([1,2,3,4,5],3);\par
+\ul\fs32 Output:\par
+\ulnone\fs28 [ 4, 5, 1, 2, 3 ]\par
+Execution Time:\par
+0.066s\par
+Memory Used:\par
+8116kb\par
+\ul\fs32\par
+}
+ 
